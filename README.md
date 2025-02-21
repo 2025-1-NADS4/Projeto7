@@ -1,2 +1,2 @@
-# The las of us
+# The last of us
 Fast and cheap

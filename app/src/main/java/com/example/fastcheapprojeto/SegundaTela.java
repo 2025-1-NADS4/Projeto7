@@ -11,7 +11,10 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import android.util.Log;
 
@@ -42,15 +45,27 @@ public class SegundaTela extends AppCompatActivity {
         });
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-
-        // Lista de exemplo
-        List<String> dados = Arrays.asList("Item 1", "Item 2", "Item 3", "Item 4");//Aqui eu coloco a quantidade que eu quero que aparece na tela.
-
-        // Adapter
-        MeuAdapter adapter = new MeuAdapter(dados);
-
-        // Layout (vertical)
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        List<Transportes> listaTransportes = new ArrayList<>();
+        listaTransportes.add(new Transportes("Uber", R.drawable.logouber, 20.00, 30.90));
+        listaTransportes.add(new Transportes("UberX", R.drawable.logouber, 40.0, 50.90));
+        listaTransportes.add(new Transportes("99 Pop", R.drawable.logo99, 75.0, 85.90));
+        listaTransportes.add(new Transportes("99 Plus", R.drawable.logo99, 95.0, 100.90));
+        listaTransportes.add(new Transportes("Taxi", R.drawable.taxi, 105.50, 130.90));//Adicionar aqui se quiser mais itens
+
+
+        //teste do sort
+        Collections.sort(listaTransportes, new Comparator<Transportes>() {
+            @Override
+            public int compare(Transportes t1, Transportes t2) {
+                return Double.compare(t1.precoMin, t2.precoMax);
+            }
+        });
+
+        //end teste sort
+
+        MeuAdapter adapter = new MeuAdapter(listaTransportes);
         recyclerView.setAdapter(adapter);
 
 

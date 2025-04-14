@@ -1,0 +1,21 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra (embaixo do quadrado) -->
+    <item android:top="4dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#44000000"
+                android:endColor="#00000000"
+                android:angle="90"/>
+        </shape>
+    </item>
+
+    <!-- Quadrado branco por cima -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#000000"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</layer-list>
+
+

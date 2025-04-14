@@ -42,6 +42,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DivTempo"
+
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
@@ -82,8 +83,8 @@
             android:id="@+id/textPartida"
             android:layout_width="301dp"
             android:layout_height="34dp"
-            android:textSize="24dp"
             android:text=""
+            android:textSize="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.122"
@@ -94,9 +95,9 @@
         <TextView
             android:id="@+id/textFinal"
             android:layout_width="301dp"
-            android:textSize="24dp"
             android:layout_height="34dp"
             android:text=""
+            android:textSize="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.122"

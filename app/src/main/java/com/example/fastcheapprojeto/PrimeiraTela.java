@@ -56,7 +56,7 @@ public class PrimeiraTela extends AppCompatActivity {
             //Fecha a tela de loading sozinha após atingir o tempo escolhido
             finish();
 
-        }, 9000);//Definir o tempo.
+        }, 5000);//Definir o tempo.
 
     }
 }

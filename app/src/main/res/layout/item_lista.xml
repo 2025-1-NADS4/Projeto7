@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/logoUber"
+        android:id="@+id/logo"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:src="@drawable/logouber"
@@ -18,38 +20,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <TextView
         android:id="@+id/textItem"
-        android:layout_width="155dp"
-        android:layout_height="29dp"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
         android:text="Uber"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
+    <!-- Pode fazer uma gambiara, colocar um text solto em cima do botao para que você escolha o tamanho necessario, estou com um bug nesse drawable "Quadrado" do botãp. Depois que eu coloquei ele a cor não consegue mais ser alterada-->
     <TextView
         android:id="@+id/textPreco"
-        android:layout_width="105dp"
-        android:layout_height="26dp"
-        android:text="100R$"
-        android:textSize="23sp"
+        android:layout_width="144dp"
+        android:layout_height="29dp"
+        android:text="150.90 - 250.90"
+        android:textColor="#220CE9"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.995"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-
-    <!-- Pode fazer uma gambiara, colocar um text solto em cima do botao para que você escolha o tamanho necessario-->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_width="147dp"
         android:layout_height="35dp"
         android:background="@drawable/quadrado"
+        android:backgroundTint="@null"
+        android:textColor="@color/white"
         android:gravity="center"
         android:text="Escolher"
         android:textSize="13sp"
@@ -59,6 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

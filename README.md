@@ -7,7 +7,7 @@
 # The last of us
 ## Fast n cheap 🚗💨
 <p align="center">
-<img src="https://github.com/2025-1-NADS4/Projeto7/blob/main/Documents/Logo.jpeg"></a>
+<img src="https://github.com/2025-1-NADS4/Projeto7/blob/main/Images/Logo.jpg"></a>
 
 ## Descrição
 <p aling = "center">

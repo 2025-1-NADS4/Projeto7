@@ -54,30 +54,30 @@ Coloque o nome na barra de pesquisa do aplicativo Google Store.
 
 ## 🗃 Histórico de lançamentos
 
-* 0.1.0 - 15/09/2024
-    * Definição do design inicial do aplicativo.
-    * Criação do nome oficial: Escolha Solidária.
-    * Estruturação básica do repositório no GitHub.
-    * Planejamento das funcionalidades principais e documentação inicial.
-* 0.2.0 - 30/09/2024
-    * Primeiro lançamento funcional do projeto.
-    * Implementação inicial da estrutura do aplicativo.
-    * Funcionalidade de cadastro de ONGs e tipos de doações (alimentos, roupas, livros, etc.).
-    * Tela inicial com opção de seleção do tipo de doação e exibição de ONGs correspondentes.
- * 0.3.0 - 15/10/2024
-    * Front-end finalizado com interface responsiva e intuitiva.
-    * Banco de dados estruturado e implementado.
-    * Backend/API em andamento, com início da integração de funcionalidades principais.
-    * Melhorias no desempenho e carregamento de dados das ONGs.
- * 0.4.0 - 01/11/2024
-     * Backend/API finalizados e integrados ao front-end.
-     * Adição de imagens e outros requisitos para publicação na Play Store.
-     * Implementação de funcionalidades para conformidade com a LGPD (Lei Geral de Proteção de Dados)
-     * Inclusão de formulário e informações exigidas para registro na Play Store.
-     * Finalização do histórico de doações e contas de usuário.
- * 1.0.0 - 18/11/2024
-    * Projeto finalizado e disponibilizado para download na Play Store.*
-    * Apresentação oficial do projeto montada e concluída para a data de 21/11/2024.
+* 0.1.0 - 24/02/2025
+    * Definição da proposta de valor da startup.
+    * Escolha do nome oficial: Fast and Cheap.
+    * Estruturação inicial do pitch e definição do público-alvo.
+    * Início da pesquisa sobre APIs de transporte (Uber, 99, táxi) para integração.
+* 0.2.0 - 11/03/2025
+    * Primeira versão do pitch desenvolvida com foco no problema, solução e diferenciais da startup.
+    * Criação dos wireframes iniciais do aplicativo.
+    * Levantamento de dados de mercado e concorrência.
+    * Início do planejamento financeiro e modelo de monetização.
+ * 0.3.0 - 01/04/2025
+    * Pitch revisado e validado com mentor ou equipe de apoio.
+    * Protótipo navegável do app criado com base nos wireframes.
+    * Desenvolvimento da identidade visual e slogan da startup.
+    * Apresentação interna para coleta de feedback e ajustes.
+ * 0.4.0 - 25/04/2025
+     * Versão final do pitch estruturada para apresentação pública.
+     * Inclusão de dados reais de simulação de comparação de preços entre transportes.
+     * Finalização do material de apoio: slides, roteiro e ensaios para o pitch.
+     * Estudo de viabilidade técnica e plano de crescimento da startup.
+ * 1.0.0 - 22/05/2025
+    * Apresentação oficial do pitch do projeto Fast and Cheap.
+    * Entrega final do protótipo e materiais da startup.
+    * Conclusão do ciclo de desenvolvimento do pitch, pronto para investidores e aceleradoras.
   
 
 
@@ -93,6 +93,7 @@ Aqui está o desing final utilizado em nosso projeto.
 Aqui estão as referências usadas no projeto.
 
 1. https://developer.android.com/?hl=pt-br
-2. https://brasil.un.org/pt-br/sdgs
-3. https://www.paraquemdoar.com.br/
+2. https://www.khipo.ai/
+3. https://www.uber.com/br/pt-br/
 4. https://docs.oracle.com/en/java/
+5. https://99app.com/

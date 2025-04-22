@@ -11,16 +11,16 @@
 
 ## Descrição
 <p aling = "center">
-O Escolha Solidária é um aplicativo desenvolvido por estudantes do curso de Análise e Desenvolvimento de Sistemas do Centro Universitário - Fundação Escola de Comércio Álvares Penteado (FECAP). O objetivo do projeto é facilitar e incentivar o hábito de ajudar o próximo, conectando pessoas dispostas a doar com Organizações Não Governamentais (ONGs) que precisam de apoio. Com uma experiência simples e segura, o Escolha Solidária possibilita que qualquer pessoa contribua para causas sociais de forma rápida e acessível.
+Fast n Cheap é uma startup digital em desenvolvimento por estudantes do curso de Análise e Desenvolvimento de Sistemas do Centro Universitário - Fundação Escola de Comércio Álvares Penteado (FECAP). Onde tem o principal produto um aplicativo para comparação de preços de meios de transporte, como Uber, 99 e táxi comum. O objetivo do projeto é oferecer aos usuários uma forma prática, rápida e econômica de escolher o transporte mais vantajoso em tempo real, promovendo mobilidade inteligente e economia no dia a dia.
   <br><br>
 
 
 ## Integrantes
 
-<a href="https://www.linkedin.com/in/guilherme-rodrigues-7468211b7/">Guilherme Rodrigues</a>, <a href="https://www.linkedin.com/in/murilo-dias-32b13a327/">Murilo Dias</a>, <a href="https://www.linkedin.com/in/vinícius-brandão-3846141bb/">Vinícius Brandão</a> e <a href="https://www.linkedin.com/in/heitor-nolasco-527b1026a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"> João Albuquerque</a>.
+<a href="https://www.linkedin.com/in/guilherme-rodrigues-7468211b7/">Guilherme Rodrigues</a>, <a href="https://www.linkedin.com/in/murilo-dias-32b13a327/">Murilo Dias</a>, <a href="https://www.linkedin.com/in/vinícius-brandão-3846141bb/">Vinícius Brandão</a> e <a href="https://www.linkedin.com/in/jo%C3%A3o-henrique-percino-albuquerque-01bb36225/p"> João Albuquerque</a>.
 
 ## Professores Orientadores
-<a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>, <a href="https://www.linkedin.com/in/jefferson-o-silva/">Jefferson Silva</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a> e <a href="https://www.linkedin.com/in/vheltai/">Vinicius Heltai.
+<a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/lucymari/">Lucy Tabuti</a>, <a href="https://www.linkedin.com/in/edsonbarbero/">Edson Barbero</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a> e <a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/">Ronaldo Araujo.
 
 ## 🛠 Estrutura de pastas
 
@@ -48,7 +48,7 @@ O Escolha Solidária é um aplicativo desenvolvido por estudantes do curso de An
 <b>App:</b>
 
 ```sh
-Escolha solidária
+Fast n cheap
 Coloque o nome na barra de pesquisa do aplicativo Google Store.
 ```
 
@@ -85,7 +85,7 @@ Coloque o nome na barra de pesquisa do aplicativo Google Store.
 
 Aqui está o desing final utilizado em nosso projeto.
 
-<a href="[https://www.figma.com/design/P3df5yE6b7cFWiy9RPRXfB/Untitled?node-id=0-1&node-type=canvas&t=Y5n7rD7uuzvtS4w3-0](https://www.figma.com/design/cjGGudML7nCt8pd95r5fwH/Untitled?node-id=1-106&t=dKUxKCZckxG4DZP6-0)">Figma</a>
+<a href="https://www.figma.com/design/cjGGudML7nCt8pd95r5fwH/Untitled?node-id=1-106&t=dKUxKCZckxG4DZP6-0">Figma</a>
 
 
 ## 🎓 Referências

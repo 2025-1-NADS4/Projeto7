@@ -52,7 +52,9 @@ public class SegundaTela extends AppCompatActivity {
         listaTransportes.add(new Transportes("UberX", R.drawable.logouber, 40.0, 50.90));
         listaTransportes.add(new Transportes("99 Pop", R.drawable.logo99, 75.0, 85.90));
         listaTransportes.add(new Transportes("99 Plus", R.drawable.logo99, 95.0, 100.90));
-        listaTransportes.add(new Transportes("Taxi", R.drawable.taxi, 105.50, 130.90));//Adicionar aqui se quiser mais itens
+        listaTransportes.add(new Transportes("Taxi", R.drawable.taxi, 105.50, 120.90));
+        listaTransportes.add(new Transportes("Taxi", R.drawable.taxi, 110.50, 130.90));//Adicionar aqui se quiser mais itens
+
 
 
         //teste do sort

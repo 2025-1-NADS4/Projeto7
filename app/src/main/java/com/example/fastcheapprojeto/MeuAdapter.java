@@ -1,80 +1,64 @@
 package com.example.fastcheapprojeto;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.graphics.Color;
 
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class MeuAdapter extends RecyclerView.Adapter<MeuAdapter.ViewHolder> {
+    private List<Transportes> listaTransportes;
 
-    private final List<Transportes> lista;
-
-    public MeuAdapter(List<Transportes> lista) {
-        this.lista = lista;
+    // Construtor OK
+    public MeuAdapter(List<Transportes> listaTransportes) {
+        this.listaTransportes = listaTransportes;
     }
 
+    // ViewHolder OK
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView texto;
+        TextView textTipoTransporte;
+        ImageView logoTransporte;
         TextView preco;
-        ImageView imagem;
-        ConstraintLayout itemBackground;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
-            texto = itemView.findViewById(R.id.textItem);
+            textTipoTransporte = itemView.findViewById(R.id.textTipoTransporte);
+            logoTransporte = itemView.findViewById(R.id.logoTransporte);
             preco = itemView.findViewById(R.id.textPreco);
-            imagem = itemView.findViewById(R.id.logo);
-            itemBackground = itemView.findViewById(R.id.itemBackground);
         }
     }
 
-    @NonNull
+    // onCreateViewHolder OK
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista, parent, false);
         return new ViewHolder(view);
     }
 
+    // onBindViewHolder corrigido
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Transportes item = lista.get(position);
-        holder.texto.setText(item.getNome());
-        holder.preco.setText(String.format("%.2f - %.2f R$", item.precoMin, item.precoMax));
-        holder.imagem.setImageResource(item.getImagemResId());
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        Transportes transporte = listaTransportes.get(position);
 
-        //Definir cor
-        double precoMin = item.getPrecoMin();
+        // Define o texto do tipo de transporte
+        holder.textTipoTransporte.setText(
+                transporte.getNome() != null ? transporte.getNome() : "--"
+        );
 
-        if (precoMin <= 25) {
-            holder.itemBackground.setBackgroundColor(Color.parseColor("#2ecc71")); // Verde
-        } else if (precoMin <= 50) {
-            holder.itemBackground.setBackgroundColor(Color.parseColor("#f1c40f")); // Amarelo
-        } else if (precoMin <= 100) {
-            holder.itemBackground.setBackgroundColor(Color.parseColor("#e67e22")); // Laranja
-        } else {
-            holder.itemBackground.setBackgroundColor(Color.parseColor("#e74c3c")); // Vermelho
-        }
-        //final teste
+        // Define o preço formatado
+        holder.preco.setText("R$ " + String.format("%.2f", transporte.getPreco()));
 
-
-
-        Log.d("MeuAdapter", "Item exibido: " + item.getNome());
+        // Atribui a imagem ao ImageView (aqui a correção)
+        holder.logoTransporte.setImageResource(transporte.getImagemResId());
     }
 
+    // getItemCount OK
     @Override
     public int getItemCount() {
-        return lista.size();
+        return listaTransportes != null ? listaTransportes.size() : 0;
     }
 }
-
-
-

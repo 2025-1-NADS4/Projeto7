@@ -47,7 +47,6 @@ public class PrimeiraTela extends AppCompatActivity {
             return;
         }
 
-        // Inicia a tela de loading
         Intent intentLoading = new Intent(this, telaloading.class);
         startActivity(intentLoading);
 
@@ -76,10 +75,12 @@ public class PrimeiraTela extends AppCompatActivity {
                         intent.putExtra("TempoEstimado", rota.getTempoEstimado());
                         intent.putExtra("TipoTransporte", rota.getTipoTransporte());
                         intent.putExtra("PrecoEstimado", rota.getPrecoEstimado());
+                        intent.putExtra("LocalPartida", locInicio);
+                        intent.putExtra("LocalFinal", locFinal);
                         startActivity(intent);
 
                         finish();
-                    }, 5000);
+                    }, 1000);
 
                 } else {
                     Log.e("API", "Resposta falhou: " + response.code());

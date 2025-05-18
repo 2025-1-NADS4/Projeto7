@@ -17,7 +17,7 @@ Fast n Cheap é uma startup digital em desenvolvimento por estudantes do curso d
 
 ## Integrantes
 
-<a href="https://www.linkedin.com/in/guilherme-rodrigues-7468211b7/">Guilherme Rodrigues</a>, <a href="https://www.linkedin.com/in/murilo-dias-32b13a327/">Murilo Dias</a>, <a href="https://www.linkedin.com/in/vinícius-brandão-3846141bb/">Vinícius Brandão</a> e <a href="https://www.linkedin.com/in/jo%C3%A3o-henrique-percino-albuquerque-01bb36225/p"> João Albuquerque</a>.
+<a href="https://www.linkedin.com/in/guilherme-rodrigues-7468211b7/">Guilherme Rodrigues</a>, <a href="https://www.linkedin.com/in/murilo-dias-32b13a327/">Murilo Dias</a>, <a href="https://www.linkedin.com/in/vinícius-brandão-3846141bb/">Vinícius Brandão</a> e <a href="https://www.linkedin.com/in/joão-albuquerquepeer/"> João Albuquerque</a>.
 
 ## Professores Orientadores
 <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/">Eduardo Savino</a>, <a href="https://www.linkedin.com/in/lucymari/">Lucy Tabuti</a>, <a href="https://www.linkedin.com/in/edsonbarbero/">Edson Barbero</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a> e <a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/">Ronaldo Araujo.

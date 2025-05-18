@@ -1,24 +1,30 @@
 package com.example.fastcheapprojeto;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class MeuAdapter extends RecyclerView.Adapter<MeuAdapter.ViewHolder> {
     private List<Transportes> listaTransportes;
+    private double menorPreco;
 
-    // Construtor OK
     public MeuAdapter(List<Transportes> listaTransportes) {
         this.listaTransportes = listaTransportes;
+        if (listaTransportes != null && !listaTransportes.isEmpty()) {
+            this.menorPreco = listaTransportes.get(0).getPreco();  // lista já ordenada, menor preco é o primeiro
+        } else {
+            this.menorPreco = 0;
+        }
     }
 
-    // ViewHolder OK
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView textTipoTransporte;
         ImageView logoTransporte;
@@ -32,31 +38,36 @@ public class MeuAdapter extends RecyclerView.Adapter<MeuAdapter.ViewHolder> {
         }
     }
 
-    // onCreateViewHolder OK
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista, parent, false);
         return new ViewHolder(view);
     }
 
-    // onBindViewHolder corrigido
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Transportes transporte = listaTransportes.get(position);
-
-        // Define o texto do tipo de transporte
-        holder.textTipoTransporte.setText(
-                transporte.getNome() != null ? transporte.getNome() : "--"
-        );
-
-        // Define o preço formatado
-        holder.preco.setText("R$ " + String.format("%.2f", transporte.getPreco()));
-
-        // Atribui a imagem ao ImageView (aqui a correção)
+        holder.textTipoTransporte.setText(transporte.getNome());
+        holder.preco.setText("R$ " + transporte.getPreco());
         holder.logoTransporte.setImageResource(transporte.getImagemResId());
+
+        double preco = transporte.getPreco();
+
+        if (preco == menorPreco) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#41B374")); // Verde claro
+        } else if (preco <= menorPreco * 1.1) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#77C768")); // Verde médio
+        } else if (preco <= menorPreco * 1.2) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#B4D94D")); // Verde escuro
+        } else if (preco <= menorPreco * 1.3) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#FFD700")); // Amarelo
+        } else if (preco <= menorPreco * 1.5) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#FF8C00")); // Laranja
+        } else {
+            holder.itemView.setBackgroundColor(Color.parseColor("#B22222")); // Vermelho
+        }
     }
 
-    // getItemCount OK
     @Override
     public int getItemCount() {
         return listaTransportes != null ? listaTransportes.size() : 0;

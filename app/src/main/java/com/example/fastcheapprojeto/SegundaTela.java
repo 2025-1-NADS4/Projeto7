@@ -10,16 +10,20 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class SegundaTela extends AppCompatActivity {
+
     private TextView textPartidaDados;
     private TextView textFinalDados;
     private TextView textDistancia;
-    private TextView textTempoEstimado;
     private TextView textTipoTransporte;
 
     @Override
@@ -27,51 +31,81 @@ public class SegundaTela extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda_tela);
 
+        // Recebe JSON das rotas via Intent e converte para lista de objetos
+        String rotasJson = getIntent().getStringExtra("rotasJson");
+        Gson gson = new Gson();
+        Type tipoLista = new TypeToken<List<RespostaRota>>(){}.getType();
+        List<RespostaRota> rotas = gson.fromJson(rotasJson, tipoLista);
+
+        // Inicializa os TextViews
         textPartidaDados = findViewById(R.id.textPartida);
         textFinalDados = findViewById(R.id.textFinal);
         textDistancia = findViewById(R.id.textDistancia);
-        textTempoEstimado = findViewById(R.id.textTempoEstimado);
         textTipoTransporte = findViewById(R.id.textTipoTransporte);
+        // textTempoEstimado removido
 
+        // Recebe strings extras via Intent
         String localPartida = getIntent().getStringExtra("LocalPartida");
         String localFinal = getIntent().getStringExtra("LocalFinal");
-        double distancia = getIntent().getDoubleExtra("DistanciaKM", -1);
-        String tempoEstimado = getIntent().getStringExtra("TempoEstimado");
-        String tipoTransporte = getIntent().getStringExtra("TipoTransporte");
-        double preco = getIntent().getDoubleExtra("PrecoEstimado", -1);
 
+        // Define textos das partidas e destino
         textPartidaDados.setText(localPartida != null ? localPartida : "");
         textFinalDados.setText(localFinal != null ? localFinal : "");
-        textDistancia.setText(distancia >= 0 ? distancia + " km" : "-- km");
-        textTempoEstimado.setText(tempoEstimado != null ? tempoEstimado : "--");
-        textTipoTransporte.setText(tipoTransporte != null ? "Tipo Transporte: " + tipoTransporte : "Tipo Transporte: --");
 
+        // Cria lista para exibir transportes com imagem e preço
+        List<Transportes> listaTransportes = new ArrayList<>();
+        if (rotas != null && !rotas.isEmpty()) {
+            for (RespostaRota rota : rotas) {
+                int imagemAtual = getImagemPorTipo(rota.getTipoTransporte());
+                listaTransportes.add(new Transportes(
+                        rota.getTipoTransporte(),
+                        imagemAtual,
+                        rota.getPrecoEstimado()
+                ));
+            }
+        }
+
+        // Ordena lista pelo preço para encontrar menor preço
+        Collections.sort(listaTransportes, Comparator.comparingDouble(Transportes::getPreco));
+        double menorPreco = listaTransportes.isEmpty() ? 0 : listaTransportes.get(0).getPreco();
+
+        // Busca rota mais barata para preencher distância e tempo
+        RespostaRota rotaMaisBarata = null;
+        if (rotas != null) {
+            for (RespostaRota rota : rotas) {
+                if (rota.getPrecoEstimado() == menorPreco) {
+                    rotaMaisBarata = rota;
+                    break;
+                }
+            }
+        }
+
+        if (rotaMaisBarata != null) {
+            String texto = String.format("Duração: %s | %.1fkm", rotaMaisBarata.getTempoEstimado(), rotaMaisBarata.getDistanciaKM());
+            textDistancia.setText(texto);
+            textTipoTransporte.setText("Tipo Transporte: " + rotaMaisBarata.getTipoTransporte());
+        } else {
+            textDistancia.setText("-- | --");
+            textTipoTransporte.setText("Tipo Transporte: --");
+        }
+
+        // Ajusta padding para as insets (barras do sistema)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
+        // Configura RecyclerView para mostrar lista de transportes
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Obtem a imagem certa de acordo com o tipo de transporte
-        int imagem = getImagemPorTipo(tipoTransporte);
-
-        List<Transportes> listaTransportes = new ArrayList<>();
-        listaTransportes.add(new Transportes(
-                tipoTransporte != null ? tipoTransporte : "Tipo desconhecido",
-                imagem,
-                preco
-        ));
-
-        // Exemplo de ordenação pelo preço, se quiser ordenar uma lista maior
-        Collections.sort(listaTransportes, Comparator.comparingDouble(Transportes::getPreco));
-
         MeuAdapter adapter = new MeuAdapter(listaTransportes);
+
         recyclerView.setAdapter(adapter);
     }
 
+    // Retorna drawable correto de acordo com tipo de transporte
     private int getImagemPorTipo(String tipoTransporte) {
         if (tipoTransporte == null) return R.drawable.logo;
 

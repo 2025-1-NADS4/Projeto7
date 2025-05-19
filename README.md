@@ -24,22 +24,58 @@ Fast n Cheap é uma startup digital em desenvolvimento por estudantes do curso d
 
 ## 🛠 Estrutura de pastas
 
--Raiz<br>
-|<br>
-|-->Documents<br>
-  &emsp;|--> Cloud Native <br>
-  &emsp;|--> Entrega 3 <br>
-  &emsp;|--> Programação Mobile/Telas <br>
-  &emsp;|--> Teste de software <br>
-  &emsp;|--> User Experience  
-|-->Images<br>
-  &emsp;|--> Imagens tablet/celular <br>
-|-->Src<br>
-  &emsp;|-->FrontEnd-BackEnd<br>
-      &emsp;&emsp;|--> APK <br>
-  &emsp;|-->API<br>
-  &emsp;|-->Banco de dados<br>
-|-->readme.md<br>
+├── .gitignore
+├── Backend
+├── Documentos
+    ├── DOCUMENTO DE PROJETO DE EXTENSÃO  - Fast and Cheap.pdf
+    ├── Entrega 01
+    │   ├── Cibersegurança e Defesa Cibernética
+    │   │   ├── Entrega 01 - Cibersegurança e Defesa Cibernética - Novo.pdf
+    │   │   └── Entrega 01 - Cibersegurança e Defesa Cibernética.pdf
+    │   ├── Ciência de Dados e Big Data
+    │   │   ├── Fast and Cheap - Entrega Script Entender Dados.ipynb
+    │   │   ├── Fast and Cheap - Entrega Script Entender Dados.py
+    │   │   └── teste
+    │   ├── Empreendedorismo e Transformação Digital
+    │   │   ├── Entrega  01 -  Empreendedorismo e Transformação Digital  - 11-03.pdf
+    │   │   └── Entrega 01- Empreendedorismo e Transformação Digital - Slides.pdf
+    │   ├── Gestão de Projetos de Software
+    │   │   └── Entrega 01 - Gestão de Projetos de Software.xlsx
+    │   └── Inteligência Artificial e Machine Learning
+    │   │   └── Entrega 01- Inteligência Artificial e Machine Learning.pdf
+    ├── Entrega 02
+    │   ├── Cibersegurança e Defesa Cibernética
+    │   │   └── Entrega 02-Cibersegurança e Defesa Cibernética .xlsx
+    │   ├── Ciência de Dados e Big Data
+    │   │   ├── Fast n Cheap - Entrega Script Preparação dos Dados.ipynb
+    │   │   ├── fast_n_cheap_entrega_script_preparação_dos_dados.py
+    │   │   └── teste
+    │   ├── Empreendedorismo e Transformação Digital
+    │   │   └── Entrega 02 - Empreendedorismo e Transformação Digital.pdf
+    │   ├── Gestão de Projetos de Software
+    │   │   └── Entrega 02 - Gestão de Projetos de Software.xlsx
+    │   └── Inteligência Artificial e Machine Learning
+    │   │   ├── Entrega 02 - Inteligência Artificial e Machine Learning.pdf
+    │   │   └── teste
+    └── Entrega 03
+    │   ├── Cibersegurança e Defesa Cibernética
+    │       └── Entrega 03 - Cibersegurança e Defesa Cibernética.pdf
+    │   ├── Ciência de Dados e Big Data
+    │       └── script_Big_Data_18_05.ipynb
+    │   ├── Empreendedorismo e Transformação Digital
+    │       └── Entrega 03 - Empreendedorismo e Transformação Digital.pptx
+    │   ├── Gestão de Projetos de Software
+    │       └── Entrega 03 - Gestão de Projeto de Software.xlsx
+    │   └── Inteligência Artificial e Machine Learning
+    │       ├── Entrega 03 - Inteligência Artificial e Machine Learning .pdf
+    │       └── Entrega_03_Inteligência_Artificial_e_Machine_Learning.ipynb
+├── Front_end
+    └── teste
+├── Images
+    ├── Banner_07_PI.pdf
+    └── Logo.jpg
+├── README.md
+├── app-debug.apk
 
 
 ## 🛠 Instalação
